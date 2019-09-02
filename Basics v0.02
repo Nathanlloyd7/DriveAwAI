@@ -1,0 +1,59 @@
+#Cleaned up code a little. Made functions for directions, soldered motor wires onto both motors.
+#02.09.19
+
+import explorerhat
+from time import sleep
+import sys, tty,termios, time
+
+
+#variables
+mot1_spd = 50
+mot2_spd = 50
+
+
+
+def forwardfun(mot1_spd, mot2_spd):
+    fullstop()
+    explorerhat.motor.one.forwards(mot1_spd)
+    explorerhat.motor.two.forward(mot2_spd)
+    
+def backwardfun(mot1_spd,mot2_spd):
+    fullstop()
+    explorerhat.motor.one.backward(mot1_spd)
+    explorerhat.motor.two.backward(mot2_spd)
+    
+def fullstop():
+    explorerhat.motor.one.stop()
+    explorerhat.motor.two.stop()
+    
+def rightturn(mot2_spd):
+    fullstop()
+    explorerhat.motor.two.forward(mot2_spd)
+    
+def leftturn(mot1_spd):
+    fullstop()
+    explorerhat.motor.one.forward(mot1_spd)
+    
+fullstop()   
+
+
+while True:
+    direction = input("f or b, r or l, s\n")
+    if direction == "f":
+        forwardfun(mot1_spd, mot2_spd)
+    elif direction == "b":
+        backwardfun(mot1_spd, mot2_spd)
+    elif direction == "s":
+        fullstop()
+    elif direction == "r":
+       rightturn(mot2_spd)
+    elif direction == "l":
+       rightturn(mot1_spd)
+        
+    
+
+
+#getch method for key pressed, turns key pressed into var
+def getch():
+    fd = sys.stdin.fileno()
+    old_settings = termios.tcgetattr(fd)
