@@ -1,4 +1,4 @@
-#Cleaned up code a little. Made functions for directions, soldered motor wires onto both motors.
+#Cleaned up code a little. Made functions for directions, soldered motor wires onto both motors. (leftturn wasn't called in l input)
 #02.09.19
 
 import explorerhat
@@ -16,25 +16,25 @@ def forwardfun(mot1_spd, mot2_spd):
     fullstop()
     explorerhat.motor.one.forwards(mot1_spd)
     explorerhat.motor.two.forward(mot2_spd)
-    
+
 def backwardfun(mot1_spd,mot2_spd):
     fullstop()
     explorerhat.motor.one.backward(mot1_spd)
     explorerhat.motor.two.backward(mot2_spd)
-    
+
 def fullstop():
     explorerhat.motor.one.stop()
     explorerhat.motor.two.stop()
-    
+
 def rightturn(mot2_spd):
     fullstop()
     explorerhat.motor.two.forward(mot2_spd)
-    
+
 def leftturn(mot1_spd):
     fullstop()
     explorerhat.motor.one.forward(mot1_spd)
-    
-fullstop()   
+
+fullstop()
 
 
 while True:
@@ -48,9 +48,9 @@ while True:
     elif direction == "r":
        rightturn(mot2_spd)
     elif direction == "l":
-       rightturn(mot1_spd)
-        
-    
+       leftturn(mot1_spd)
+
+
 
 
 #getch method for key pressed, turns key pressed into var
