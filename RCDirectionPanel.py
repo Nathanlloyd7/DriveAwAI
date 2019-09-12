@@ -1,8 +1,10 @@
 #control direction of rc
 from tkinter import *
+from RCCar import *
 
 class RCDirectionPanel:
     def __init__(self, root, frame):
+        rc = RCCar(True, 50, 50)
         self.root = root
         self.frame = frame
 
@@ -10,8 +12,8 @@ class RCDirectionPanel:
         Label(self.frame, text="Direction:").grid(row=0, column=0, padx=10, pady=2)
 
 #Up
-        self.upBtn = Button(self.frame, text="Up", command=lambda:print("up"))
-        self.upBtn.grid(row=1, column=0, padx=10, pady=2)
+        self.upBtn = Button(self.frame, text="Up", command= rc.goForward) #this works but because the direction and speed panel don't communicate
+        self.upBtn.grid(row=1, column=0, padx=10, pady=2)                 #it has a direction but no speed.
 
 #Frame to Hold left and right
         self.btnFrame = Frame(self.frame, width=200, height=10, borderwidth=1)
