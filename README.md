@@ -16,3 +16,6 @@ Been busy over the last few days, not much programming or research taken place. 
 --Ext: After spending time of making a functional RC class, I've hit the problem I thought I may have by putting my speed and distance into seperate containers. when speed is updated, the direction panel has no idea. For this to be solved, do I simply need to use global variables or should I make new methods that send this info over? 
 
 !!I think the best way forward would be to initialize my rc car in the RCTK window and have all my panels speak to this window.
+
+19.09.19
+Moved into Uni halls now, so potentially more frequent work. Merged the speed and direction panel into a movement panel. Adding diagonal turning too, currently the buttons don't match up in size, but eventually I will use images(arrows) to point in the direction. DIrections have not been coded in other than forward and backward as there is no chassis, so right and left is undecided. Added in a scale/slider for speed as it is more representative of real driving. Also added some basic menu buttons. Need to clean the code out and ideall would like to OOP up my menu buttons to make RCTK cleaner. But it is less important as these are secondary features. Still trying to find out how to access a stream of the picam too. Have some ideas but not seen any absolutes as of yet.
