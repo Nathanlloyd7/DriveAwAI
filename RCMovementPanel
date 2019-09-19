@@ -1,0 +1,51 @@
+#control direction of rc
+from tkinter import *
+from RCCar import *
+
+class RCMovementPanel:
+    def __init__(self, root, frame):
+        rc = RCCar(True, 50, 50)
+        self.root = root
+        self.frame = frame
+
+#Frame for Directional Buttons & speed
+        Label(self.frame, text="Direction:").grid(row=0, column=0, padx=10, pady=2)
+
+#top row
+        self.topFrame = Frame(self.frame, width=200, height=10, borderwidth=1)
+        self.topFrame.grid(row=1, column=0, padx=10, pady=2)
+        self.left_upBtn = Button(self.topFrame, text="diag", command= rc.goForward)
+        self.left_upBtn.grid(row=1, column=1, padx=10, pady=2)
+        self.upBtn = Button(self.topFrame, text="Up", command= rc.goForward)
+        self.upBtn.grid(row=1, column=2, padx=10, pady=2)
+        self.right_upBtn = Button(self.topFrame, text="diag", command= rc.goForward)
+        self.right_upBtn.grid(row=1, column=3, padx=10, pady=2)
+#Frame to Hold left, stop and right
+        self.midFrame = Frame(self.frame, width=200, height=10, borderwidth=1)
+        self.midFrame.grid(row=2, column=0, padx=10, pady=2)
+        self.leftBtn = Button(self.midFrame, text="Left", command=lambda:print("left"))
+        self.leftBtn.grid(row=0, column=0, padx=10, pady=2)
+        self.stopBtn = Button(self.midFrame, text="Stop", command = rc.handbreak)
+        self.stopBtn.grid(row=0, column=1, padx=10, pady=2)
+        self.rightBtn = Button(self.midFrame, text="Right", command=lambda:print("right"))
+        self.rightBtn.grid(row=0, column=2, padx=10, pady=2)
+#Down
+        self.botFrame = Frame(self.frame, width=200, height=10, borderwidth=1)
+        self.botFrame.grid(row=3, column=0, padx=10, pady=2)
+        self.left_downBtn = Button(self.botFrame, text="Diag", command= rc.goBack)
+        self.left_downBtn.grid(row=0, column=1, padx=10, pady=2)
+        self.downBtn = Button(self.botFrame, text="Down", command= rc.goBack)
+        self.downBtn.grid(row=0, column=2, padx=10, pady=2)
+        self.right_downBtn = Button(self.botFrame, text="Diag", command= rc.goBack)
+        self.right_downBtn.grid(row=0, column=3, padx=10, pady=2)
+        Label(self.frame, text=" ").grid(row=4, column=0, padx=10, pady=2)
+#Auto/Man Toggle
+        self.aiTogBtn = Button(self.frame, text="Ai Toggle", command=lambda:print("a/i toggle"))
+        self.aiTogBtn.grid(row=5, column=0, padx=10, pady=2)
+#speed
+        Label(self.frame, text=" ").grid(row=6, column=0, padx=10, pady=2)
+        self.speedFrame = Frame(self.frame, width=200, height=10, borderwidth=1)
+        self.speedFrame.grid(row=7, column=0, padx=10, pady=2)
+        Label(self.speedFrame, text="Speed:").grid(row=0, column=0, padx=10, pady=2)
+        scale = Scale(self.speedFrame, from_ = 35, to = 100, orient = HORIZONTAL)
+        scale.grid(row=1, column=0, padx=10, pady=2)
