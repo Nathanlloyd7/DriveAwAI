@@ -1,5 +1,5 @@
 #rc car class
-
+from time import sleep
 import explorerhat
 
 class RCCar:
@@ -26,12 +26,17 @@ class RCCar:
         return ("Motor1: " + mot1print + "\nMotor2: "+ mot2print)
 
     def goForward(self):
-        explorerhat.motor.one.forwards(self.mot1_spd)
-        explorerhat.motor.two.forward(self.mot2_spd)
+        explorerhat.motor.one.forwards(50)
+        explorerhat.motor.two.forward(50)
+
 
     def handbreak(self):
         explorerhat.motor.one.stop()
         explorerhat.motor.two.stop()
+
+    def goBack(self):
+        explorerhat.motor.one.backwards(50)
+        explorerhat.motor.two.backward(50)
 
 
 
