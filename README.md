@@ -19,3 +19,6 @@ Been busy over the last few days, not much programming or research taken place. 
 
 19.09.19
 Moved into Uni halls now, so potentially more frequent work. Merged the speed and direction panel into a movement panel. Adding diagonal turning too, currently the buttons don't match up in size, but eventually I will use images(arrows) to point in the direction. DIrections have not been coded in other than forward and backward as there is no chassis, so right and left is undecided. Added in a scale/slider for speed as it is more representative of real driving. Also added some basic menu buttons. Need to clean the code out and ideall would like to OOP up my menu buttons to make RCTK cleaner. But it is less important as these are secondary features. Still trying to find out how to access a stream of the picam too. Have some ideas but not seen any absolutes as of yet.
+
+23.09.19
+Added minor features to some of the menu items and changed about from a new window to a message box. I can see these menu items taking up a lot of room and it's not too clean coding having them in the RCTK file. Might need to implement OOP in the future to bring these menu items in. However I might save cleaning up my code until I have working up features as it is more important I get things working first.
