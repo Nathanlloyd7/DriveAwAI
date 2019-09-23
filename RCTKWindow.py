@@ -1,5 +1,6 @@
 #Brings all the individual panels together for one view. Initializes the stage/window etc
 from tkinter import *
+from tkinter import messagebox
 from RCSpeedPanel import *
 from RCMovementPanel import *
 from RCVideoPanel import *
@@ -8,27 +9,55 @@ class RCTKWindow:
         self.root = Tk() #Makes the window
         self.root.minsize(300,360)
         
+        #menu functions
+        def controlsetting():  #will allow customization
+            controlSet = Toplevel(self.root)
+            controlSet.title("Control Panel")
+            controlSet.minsize(300,300)
+            Label(controlSet, text="This is the Control Page").grid(row=0, column=1, padx=10, pady=2)
+            controlSet.mainloop()
+        
+        def motorsetting():  #will allow customization
+           
+            def saveMotor():
+                print("save")
+                
+            motorSet = Toplevel(self.root)
+            motorSet.title("Motor Control Panel")
+            motorSet.minsize(300,300)
+            Label(motorSet, text="Here you can toggle whether manual speed control is active").grid(row=0, column=0, padx=10, pady=2)
+            Label(motorSet, text=" ").grid(row=1, column=1, padx=10, pady=2)
+            Label(motorSet, text="Would you like to turn off manual speed?:").grid(row=2, column=0, padx=10, pady=2) #replace 'off' with a loaded in var %
+            chk = Checkbutton(motorSet, text="Toggle").grid(row=3, column=0, padx=10, pady=2)
+            saveLock = Button(motorSet, text="Save", command = saveMotor).grid(row=4, column=0, padx=10, pady=2)
+            stateLog = Text(motorSet, width = 20, height = 2, takefocus=0)
+            stateLog.grid(row=5, column=0, padx=10, pady=2)
+            stateLog.insert(0.0,"Current state: "+ "**Loaded in value**")
+            motorSet.mainloop()
+       
         def about():
-            about = Toplevel(self.root)
-            about.title("About")
-            about.minsize(300,300)
-            Label(about, text="This is the about Page").grid(row=1, column=0, padx=10, pady=2)
-            about.mainloop()
+            messagebox.showinfo("About", """Hello, welcome to this RC application\n 
+            This application will function as a minature version of a real full size car, giving the user the ability to control it using GUI or keyboard inputs as well as toggle assistive driving technologies:\n 
+            If you have any questions please contact N Lloyd here:\n P16187037@my365.dmu.ac.uk""")
+            
+    
+
 
         #menu items
         menuBar = Menu(self.root)
         file = Menu(menuBar, tearoff = 0)
-        
-        file.add_command(label="Control Settings")
-        file.add_command(label="Motor Settings")
+        file.add_command(label="Control Settings", command = controlsetting)
+        file.add_command(label="Motor Settings", command = motorsetting)
         file.add_separator()
         file.add_command(label="Exit", command = self.root.quit)
         menuBar.add_cascade(label = "File", menu = file)
-
         help = Menu(menuBar, tearoff = 0)
         help.add_command(label="About", command = about)
         menuBar.add_cascade(label="Help", menu = help)
-        
+
+
+
+
         self.root.wm_title("RC App") #Makes the title that will appear in the top left
         self.root.config(background = "Cyan")
         self.leftFrame = Frame(self.root, width=200, height = 600)
@@ -37,7 +66,6 @@ class RCTKWindow:
         self.centralFrame.grid(row=0, column=1, padx=10, pady=2)
         self.leftPanel = RCMovementPanel(self.root, self.leftFrame)
         self.centralFrame = RCVideoPanel(self.root, self.centralFrame)
-
         self.root.config(menu=menuBar)
 
 
