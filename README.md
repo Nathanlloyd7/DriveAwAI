@@ -22,3 +22,6 @@ Moved into Uni halls now, so potentially more frequent work. Merged the speed an
 
 23.09.19
 Added minor features to some of the menu items and changed about from a new window to a message box. I can see these menu items taking up a lot of room and it's not too clean coding having them in the RCTK file. Might need to implement OOP in the future to bring these menu items in. However I might save cleaning up my code until I have working up features as it is more important I get things working first.
+
+27.09.19
+Swapped to a pair of radio buttons for my one menu item. the menu saves and loads as expected but I can't display in the log box. I can sometimes get one working but not the other, could be an issue with the var or the r+/w+ access.
