@@ -25,3 +25,6 @@ Added minor features to some of the menu items and changed about from a new wind
 
 27.09.19
 Swapped to a pair of radio buttons for my one menu item. the menu saves and loads as expected but I can't display in the log box. I can sometimes get one working but not the other, could be an issue with the var or the r+/w+ access.
+
+01.10.19
+Created a new menu class to clean up RCTKWindow, I broke the save and load feature because of it but very happy with the cleaner approach. This approach as I followed a stack overflow posting meant I had to drop my root naming convention in RCTK in favour of initialising by tk.TK__init__(self) but other than those two issues fairly simple. Would be nice if I could get controller settings for a future update. Also realised I haven't posted the widget icon 'realcar1.png' but fairly straight forward so I wont post. Really happy with progress so far, think I'm going to go down an opencv & Tensor flow route so I can have an opencv stream in tkinter whereas currently getting the video in a frame is out of my knowledge.
