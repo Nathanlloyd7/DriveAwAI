@@ -28,3 +28,6 @@ Swapped to a pair of radio buttons for my one menu item. the menu saves and load
 
 01.10.19
 Created a new menu class to clean up RCTKWindow, I broke the save and load feature because of it but very happy with the cleaner approach. This approach as I followed a stack overflow posting meant I had to drop my root naming convention in RCTK in favour of initialising by tk.TK__init__(self) but other than those two issues fairly simple. Would be nice if I could get controller settings for a future update. Also realised I haven't posted the widget icon 'realcar1.png' but fairly straight forward so I wont post. Really happy with progress so far, think I'm going to go down an opencv & Tensor flow route so I can have an opencv stream in tkinter whereas currently getting the video in a frame is out of my knowledge.
+
+04.10.19
+Only small change today, got the save and load features working for the radio buttons on motor settings. Not as clean as I would like but it gets the job done. Next stage will be getting the loaded variables for the menu to actually interact with the panels
