@@ -15,10 +15,20 @@ class RCMenuBar(tk.Menu):
         helpMenu = tk.Menu(self, tearoff=0)
         self.add_cascade(label="Help", menu = helpMenu, underline=0)
         helpMenu.add_command(label="About", underline=0, command = self.about)
-
+        #keyboard shortcuts
+        self.bind_all("<Control-a>", self.about)
+        self.bind_all("<Control-c>", self.controlSetting)
+        self.bind_all("<Control-m>", self.motorsetting)
+        
+  
     def quit(self):
         print("Exit")
-        #sys.exit(0)
+        try:
+            #self.parent.destroy() #destroys the menu not all windows, need to sort this
+            sys.exit(0)
+        except:
+            print(sys.exc_info()[0])
+
     def controlSetting(self):  #will allow customization
         controlSet = Toplevel()
         controlSet.title("Control Panel")
@@ -26,12 +36,34 @@ class RCMenuBar(tk.Menu):
         Label(controlSet, text="This is the Control Page").grid(row=0, column=1, padx=10, pady=2)
         controlSet.mainloop()
     
-    def motorsetting(self):  #will allow customization
+    def loadMotSettings(self):
         motorSetsFile = open("motorSetting.txt", "r") #current setup lets you save to a doc but not show in a log or print in??
         loadedVar = motorSetsFile.read(1)
-        print(motorSetsFile.read(1))
+        return loadedVar
         motorSetsFile.close()
+    def saveMotor(self, ):
+        motorSetsFile = open("motorSetting.txt", "w")
+        if selected.get() == 1:
+            print("You have selected : "+ str(selected.get()) + ": Manual speed is ON")
+            motorSetsFile.write(str(selected.get()))
+            motorSetsFile.close()
+            motorSet.destroy()
+        elif selected.get() == 0:
+            print("You have selected : "+ str(selected.get()) + ": Manual speed is OFF")
+            motorSetsFile.write(str(selected.get()))
+            motorSetsFile.close()
+            motorSet.destroy()
+        else:
+            print("Something went wrong")
+            motorSetsFile.close()
+            motorSet.destroy()
+      
+    def noSpeed(self):
+        print("Speed Toggle Disabled\n Modify in Motor Settings")
         
+    def motorsetting(self):  #will allow customization
+        loadedVar = self.loadMotSettings()
+        global motorSet
         motorSet = Toplevel()
         motorSet.title("Motor Control Panel")
         motorSet.minsize(300,300)
@@ -40,18 +72,17 @@ class RCMenuBar(tk.Menu):
         Label(motorSet, text="Would you like to toggle manual speed?:").grid(row=2, column=0, padx=10, pady=2) #replace 'off' with a loaded in var %
         motorFrame = Frame(motorSet, width=200, height=10, borderwidth=1)
         motorFrame.grid(row=3, column=0, padx=10, pady=2)
+        global selected
         selected = IntVar()
         radioOn = Radiobutton(motorFrame, text="On", value=1, variable=selected).grid(row=0, column=0, padx=10, pady=2)
         radioOff = Radiobutton(motorFrame, text="Off",value=0, variable=selected).grid(row=0, column=1, padx=10, pady=2)
-        saveLock = Button(motorSet, text="Save").grid(row=4, column=0, padx=10, pady=2) #, command = self.saveMotor
+        saveLock = Button(motorSet, text="Save", command = self.saveMotor).grid(row=4, column=0, padx=10, pady=2)
         stateLog = Text(motorSet, width = 20, height = 2, takefocus=0)
         stateLog.grid(row=5, column=0, padx=10, pady=2)
-        stateLog.insert(0.0,"1 is On, 0 is Off\nCurrent state: ") #+ loadedVar)
+        stateLog.insert(0.0,"1 is On, 0 is Off\nCurrent state: " + loadedVar) 
         motorSet.mainloop()
-        
+
     def about(self):
         messagebox.showinfo("About", """Hello, welcome to this RC application\n
         This application will function as a minature version of a real full size car, giving the user the ability to control it using GUI or keyboard inputs as well as toggle assistive driving technologies:\n
         If you have any questions please contact N Lloyd here:\n P16187037@my365.dmu.ac.uk""")
-        
-        
