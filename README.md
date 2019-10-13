@@ -31,3 +31,6 @@ Created a new menu class to clean up RCTKWindow, I broke the save and load featu
 
 04.10.19
 Only small change today, got the save and load features working for the radio buttons on motor settings. Not as clean as I would like but it gets the job done. Next stage will be getting the loaded variables for the menu to actually interact with the panels
+
+13.10.19
+Videopanel added in, opencv needed for videostream as there is some complications when threading rpicam. Had a majority of the code done a few days ago but got stuck due to unfamiliarity with open cv syntax. Tried to use params where they weren't needed, but it is fixed now and working. Might look to add a menu that changes view by an open cv filter. "Night vision" Etc. Also looking to add "security features" where I can make use of the touch sensors on the explorer hat and make a password system.
