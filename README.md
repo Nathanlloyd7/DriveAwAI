@@ -34,3 +34,6 @@ Only small change today, got the save and load features working for the radio bu
 
 13.10.19
 Videopanel added in, opencv needed for videostream as there is some complications when threading rpicam. Had a majority of the code done a few days ago but got stuck due to unfamiliarity with open cv syntax. Tried to use params where they weren't needed, but it is fixed now and working. Might look to add a menu that changes view by an open cv filter. "Night vision" Etc. Also looking to add "security features" where I can make use of the touch sensors on the explorer hat and make a password system.
+
+16.10.19
+Ran images for buttons through PhotoImage and they were too big and so couldn't resize, now using PIL library to edit them in app. Using images for buttons has slowed the start up slightly. Optimising this would be ideal. Changed the layout of code for rc and menu, initialising them both as self will allow me to use more features and have cleaner code.
