@@ -37,3 +37,4 @@ Videopanel added in, opencv needed for videostream as there is some complication
 
 16.10.19
 Ran images for buttons through PhotoImage and they were too big and so couldn't resize, now using PIL library to edit them in app. Using images for buttons has slowed the start up slightly. Optimising this would be ideal. Changed the layout of code for rc and menu, initialising them both as self will allow me to use more features and have cleaner code.
+----- I am definately keen on this password idea as well as some fun features like a horn.
