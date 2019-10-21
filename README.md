@@ -1,4 +1,4 @@
-# RPI_RCCAR
+# DriveAwAI
 Final Year Project
 
 This is my dissertation project to create a rc car and develop it to have some level of automation using images. This will be used as a log/update for myself.
@@ -38,3 +38,6 @@ Videopanel added in, opencv needed for videostream as there is some complication
 16.10.19
 Ran images for buttons through PhotoImage and they were too big and so couldn't resize, now using PIL library to edit them in app. Using images for buttons has slowed the start up slightly. Optimising this would be ideal. Changed the layout of code for rc and menu, initialising them both as self will allow me to use more features and have cleaner code.
 ----- I am definately keen on this password idea as well as some fun features like a horn.
+
+21.10.19
+Gone home for the week and so I haven't done any coding or research as I want some downtime, I have started to fill in a project contract however and decided to go from a scientific title to a more commerical one. I have decided to give the project an official name of 'Drive AwAI' which stands for "Drive Assisted with AI", I really like the title name and have enjoyed the downtime. I am looking forward to carrying on with the work at the end of this week. Hopefully I can add in a few fun features, the University has purchased a coral TPU on my behalf which is great. As I am already ahead of schedule, getting this device puts me even further ahead as it is the device I had in mind at the start of the project and now I do not need to replan or pay extra money to ensure I get it operational.
