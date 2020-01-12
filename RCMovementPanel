@@ -95,7 +95,7 @@ class RCMovementPanel:
         self.scale.set(75)                                                                           #sets default speed
         self.setSpeed = Button(self.speedFrame, text="Set Speed", command = self.returnSpeed)
         self.setSpeed.grid(row=2, column =0, padx=10, pady=2)
-        
+
     def returnSpeed(self):
-            self.rc.set__spd(self.scale.get(),self.scale.get())
+            self.rc.set__spd(self.scale.get())
             print (self.scale.get())     #mock function for now
