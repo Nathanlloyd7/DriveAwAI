@@ -8,26 +8,14 @@ class RCCar:
         self.mot1_spd = 0
         self.mot2_spd = 0
 
-    def set_low_spd(self):
-        self.mot1_spd = 35
-        self.mot2_spd = 35
-
-    def set_med_spd(self):
-        self.mot1_spd = 70
-        self.mot2_spd = 70
-
-    def set_high_spd(self):
-        self.mot1_spd = 100
-        self.mot2_spd = 100
-
     def motors_spd_toStr(self):
         mot1print = str(self.mot1_spd) #change this from (1,2) to (L,R)?
         mot2print = str(self.mot2_spd)
         return ("Motor1: " + mot1print + "\nMotor2: "+ mot2print)
 
     def goForward(self):
-        explorerhat.motor.one.forwards(50)
-        explorerhat.motor.two.forward(50)
+        explorerhat.motor.one.forwards(self.mot1_spd)
+        explorerhat.motor.two.forward(self.mot2_spd)
 
 
     def handbreak(self):
@@ -38,15 +26,6 @@ class RCCar:
         explorerhat.motor.one.backwards(50)
         explorerhat.motor.two.backward(50)
 
-
-
-
-
-
-
-
-
-
-    #def set_low_spd(self, mot1_spd, mot2_spd):        another method of setting speed
-        #self.mot1_spd = mot1_spd                      would only need one method but
-        #self.mot2_spd = mot2_spd                      would need to pass ints in param
+    def set__spd(self, newspeed):        #another method of setting speed
+        self.mot1_spd = newspeed                      #would only need one method but
+        self.mot2_spd = newspeed                    #would need to pass ints in param
