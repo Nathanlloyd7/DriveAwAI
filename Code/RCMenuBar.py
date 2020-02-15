@@ -90,7 +90,7 @@ class RCMenuBar(tk.Menu):
             passSetsFile.close()
             passSet.destroy()
         else:
-            messagebox.showwarning(title="Invalid Password", message = "Must have only 4 digits")
+            messagebox.showwarning(title="Invalid Password", message = "Must have 4 digits!")
 
     def addtoPW(self, pwNum):
         newPWLog.configure(state="normal")
