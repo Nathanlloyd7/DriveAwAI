@@ -6,7 +6,7 @@ Welcome to my Final Year Project as an undergraduate, the aim of this project is
 Item | COST | Link
 -----|------|-----
 Raspberry Pi 4 | £40 | ??
-ExplorerHat | ??|??
+ExplorerHat | £75 | https://www.mouser.co.uk/ProductDetail/Coral/G950-01456-01?qs=u16ybLDytRbcxxqFKdbhgQ%3D%3D&vip=1&gclid=Cj0KCQiAyp7yBRCwARIsABfQsnTXXBOMc39uSGN2DqE6U5CDuxEE6uXcuEYrENukWt5UyDaJZwTOfbQaAoTaEALw_wcB
 Coral TPU | ??|??
 PiCam V2 | ??|??
 Motors | ??|??
