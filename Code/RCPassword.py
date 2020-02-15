@@ -2,12 +2,15 @@ import time
 import explorerhat as hat
 import RPi.GPIO as GPIO
 import sys
+import os
+
 
 
 class RCPassword:
     def __init__(self):
+        dlpath = os.getcwd()
         #loadinpin
-        loadedFile = open("passSetting.txt", "r")
+        loadedFile = open(dlpath+"/Code/Settings/passSetting.txt", "r")
         loadedPW = loadedFile.read()
         loadedFile.close()
         #print(loadedPW.split(','))
@@ -98,3 +101,4 @@ class RCPassword:
 
     def getSavedPin(self):
         return self.correct_pin
+
