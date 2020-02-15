@@ -54,12 +54,12 @@ Step 3: Check Installs by running a model
 >--input images/parrot.jpg
 
 # Installing Requirements
-Step 1: 
->Enable i2c, SSH, Camera and VNC  in Raspberry Pi config.
-Step 2:
->Download the project if you haven't already.
-Step 3:
->Unzip
-Step 4:
->Navigate to the directory (/DriveAwAI-Nathanlloyd7) through terminal, here you can find the requirements doc. Then Run 
->pip install --user --requirement Requirements.txt
+Step 1: <br/>
+>Enable i2c, SSH, Camera and VNC  in Raspberry Pi config.<br/>
+Step 2:<br/>
+>Download the project if you haven't already.<br/>
+Step 3:<br/>
+>Unzip<br/>
+Step 4:<br/>
+>Navigate to the directory (/DriveAwAI-Nathanlloyd7) through terminal, here you can find the requirements doc. Then Run <br/>
+>pip install --user --requirement Requirements.txt<br/>
