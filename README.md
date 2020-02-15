@@ -2,8 +2,9 @@
 Brief intro to content
 
 ## Shopping List
-ITEM | COST | Link
-------------------
+
+Item | COST | Link
+-----|------|-----
 Raspberry Pi 4 | £40 | ??
 ExplorerHat | ??|??
 Coral TPU | ??|??
