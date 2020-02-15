@@ -56,7 +56,7 @@ class RCMenuBar(tk.Menu):
         passSet.title("Control Panel")
         passSet.minsize(300,300)
 
-        passSetsFile = open("passSetting.txt", "r")
+        passSetsFile = open("/Settings/passSetting.txt", "r")
         loadedPass = passSetsFile.readline()
         print(loadedPass)
         print(type(loadedPass))
@@ -83,7 +83,7 @@ class RCMenuBar(tk.Menu):
 
 
     def savePass(self):
-        passSetsFile = open("passSetting.txt", "w")
+        passSetsFile = open("/Settings/passSetting.txt", "w")
         #newPin = str(1113)
         newPin = newPWLog.get(0.0,END)
 
@@ -117,14 +117,14 @@ class RCMenuBar(tk.Menu):
 
 # ------------------------ Motor Speed Lock Menu Item and Methods ------------------------
     def loadMotSettings(self):
-        motorSetsFile = open("motorSetting.txt", "r") #current setup lets you save to a doc but not show in a log or print in??
+        motorSetsFile = open("/Settings/motorSetting.txt", "r") #current setup lets you save to a doc but not show in a log or print in??
         loadedVar = motorSetsFile.read(1)
         return loadedVar
         motorSetsFile.close()
 
 
     def saveMotor(self, ):
-        motorSetsFile = open("motorSetting.txt", "w")
+        motorSetsFile = open("/Settings/motorSetting.txt", "w")
         if selected.get() == 1:
             print("You have selected : "+ str(selected.get()) + ": Manual speed is ON")
             motorSetsFile.write(str(selected.get()))
