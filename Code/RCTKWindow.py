@@ -11,12 +11,13 @@ from Code.RCPassword import RCPassword
 class RCTKWindow(tk.Tk):
     def __init__(self):
         tk.Tk.__init__(self) #Makes the window
+        dlpath = os.getcwd()
         self.passW = RCPassword()
         self.menubar = RCMenuBar(self)
         self.config(menu=self.menubar)
         self.minsize(950,530)
         self.geometry('950x530+0+0')
-        self.tk.call('wm', 'iconphoto', self._w, tk.PhotoImage(file='/Images/realcar1.png'))
+        self.tk.call('wm', 'iconphoto', self._w, tk.PhotoImage(file= dlpath+'/Code/Images/realcar1.png'))
         self.wm_title("Drive AwAI") #Makes the title that will appear in the top left
         self.config(background = "Cyan")
         self.leftFrame = Frame(self, width=200, height = 600)
