@@ -8,9 +8,9 @@ import os
 
 class RCPassword:
     def __init__(self):
-        d = os.getcwd()
+        dlpath = os.getcwd()
         #loadinpin
-        loadedFile = open(d+"/Code/Settings/passSetting.txt", "r")
+        loadedFile = open(dlpath+"/Code/Settings/passSetting.txt", "r")
         loadedPW = loadedFile.read()
         loadedFile.close()
         #print(loadedPW.split(','))
