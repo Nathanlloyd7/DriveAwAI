@@ -29,3 +29,5 @@ Step 3: Check Installs by running a model
 >--input images/parrot.jpg
 
 # Installing Requirements
+Navigate to the directory (/DriveAwAI-Nathanlloyd7) here you can find the requirements doc. Run ->
+>pip install --user --requirement Requirements.txt
