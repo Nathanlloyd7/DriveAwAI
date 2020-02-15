@@ -2,45 +2,48 @@
 from tkinter import *
 from Code.RCCar import *
 from PIL import Image, ImageTk
+import os
 
 class RCMovementPanel:
     def __init__(self, root, frame):
         self.rc = RCCar(True, 50, 50)
         self.root = root
         self.frame = frame
+        dlpath = os.getcwd()
+        
 #images import and process into smaller size
         try:
             self.arrowSy = 50   #customizable maybe a menu item?
             self.arrowSx = 50
-            self.arrowUp = Image.open("/Images/Arrow-UP.png")
+            self.arrowUp = Image.open(dlpath+"/Code/Images/Arrow-UP.png")
             self.arrowUp = self.arrowUp.resize((self.arrowSx,self.arrowSy), Image.ANTIALIAS)
             self.arrowUp = ImageTk.PhotoImage(self.arrowUp)
 
-            self.arrowUr = Image.open("/Images/Arrow-UR.png")
+            self.arrowUr = Image.open(dlpath+"/Code/Images/Arrow-UR.png")
             self.arrowUr = self.arrowUr.resize((self.arrowSx,self.arrowSy), Image.ANTIALIAS)
             self.arrowUr = ImageTk.PhotoImage(self.arrowUr)
 
-            self.arrowUl = Image.open("/Images/Arrow-UL.png")
+            self.arrowUl = Image.open(dlpath+"/Code/Images/Arrow-UL.png")
             self.arrowUl = self.arrowUl.resize((self.arrowSx,self.arrowSy), Image.ANTIALIAS)
             self.arrowUl = ImageTk.PhotoImage(self.arrowUl)
 
-            self.arrowRi = Image.open("/Images/Arrow-RI.png")
+            self.arrowRi = Image.open(dlpath+"/Code/Images/Arrow-RI.png")
             self.arrowRi = self.arrowRi.resize((self.arrowSx,self.arrowSy), Image.ANTIALIAS)
             self.arrowRi = ImageTk.PhotoImage(self.arrowRi)
 
-            self.arrowLe = Image.open("/Images/Arrow-LE.png")
+            self.arrowLe = Image.open(dlpath+"/Code/Images/Arrow-LE.png")
             self.arrowLe = self.arrowLe.resize((self.arrowSx,self.arrowSy), Image.ANTIALIAS)
             self.arrowLe = ImageTk.PhotoImage(self.arrowLe)
 
-            self.arrowDl = Image.open("/Images/Arrow-DL.png")
+            self.arrowDl = Image.open(dlpath+"/Code/Images/Arrow-DL.png")
             self.arrowDl = self.arrowDl.resize((self.arrowSx,self.arrowSy), Image.ANTIALIAS)
             self.arrowDl = ImageTk.PhotoImage(self.arrowDl)
 
-            self.arrowDo = Image.open("/Images/Arrow-DO.png")
+            self.arrowDo = Image.open(dlpath+"/Code/Images/Arrow-DO.png")
             self.arrowDo = self.arrowDo.resize((self.arrowSx,self.arrowSy), Image.ANTIALIAS)
             self.arrowDo = ImageTk.PhotoImage(self.arrowDo)
 
-            self.arrowDr = Image.open("/Images/Arrow-DR.png")
+            self.arrowDr = Image.open(dlpath+"/Code/Images/Arrow-DR.png")
             self.arrowDr = self.arrowDr.resize((self.arrowSx,self.arrowSy), Image.ANTIALIAS)
             self.arrowDr = ImageTk.PhotoImage(self.arrowDr)
 
@@ -99,3 +102,4 @@ class RCMovementPanel:
     def returnSpeed(self):
             self.rc.set__spd(self.scale.get())
             print (self.scale.get())     #mock function for now
+
