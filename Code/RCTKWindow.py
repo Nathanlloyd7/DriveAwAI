@@ -2,11 +2,11 @@
 from tkinter import *
 from tkinter import messagebox
 import tkinter as tk
-from RCMovementPanel import *
-from RCVideoPanel import *
+from Code.RCMovementPanel import *
+from Code.RCVideoPanel import *
 import os
-from RCMenuBar import RCMenuBar
-from RCPassword import RCPassword
+from Code.RCMenuBar import RCMenuBar
+from Code.RCPassword import RCPassword
 
 class RCTKWindow(tk.Tk):
     def __init__(self):
