@@ -2,6 +2,20 @@
 Brief intro to content
 
 ## Shopping List
+Raspberry Pi 4
+ExplorerHat
+Coral TPU
+PiCam V2
+
+Motors
+Wheels
+Dragging Wheel (Shooping Cart)
+Jumper Wires M-M
+LED's x2
+Resistor x2
+
+## Car Body
+I have had a lot of help from a friend designing a chassis to fit the items I've accumilated, you can use whatever you want for your body... but the CAD models and designs will be displayed within a folder shortly.
 
 
 ## Installing Coral TPU
@@ -29,6 +43,7 @@ Step 3: Check Installs by running a model
 >--input images/parrot.jpg
 
 # Installing Requirements
-First you need to enable i2c in Raspberry Pi config.
-Navigate to the directory (/DriveAwAI-Nathanlloyd7) here you can find the requirements doc. Run ->
+First you need to enable i2c, SSH, Camera and VNC  in Raspberry Pi config.
+
+Navigate to the directory (/DriveAwAI-Nathanlloyd7) here you can find the requirements doc. Then Run ->
 >pip install --user --requirement Requirements.txt
