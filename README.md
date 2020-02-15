@@ -21,7 +21,7 @@ I have had a lot of help from a friend designing a chassis to fit the items I've
 ## Installing Coral TPU
 Step 1: Install Coral TPU - https://coral.ai/docs/accelerator/get-started/
 
-`<addr>`echo "deb https://packages.cloud.google.com/apt coral-edgetpu-stable main" | sudo tee /etc/apt/sources.list.d/coral-edgetpu.list
+<addr> echo "deb https://packages.cloud.google.com/apt coral-edgetpu-stable main" | sudo tee /etc/apt/sources.list.d/coral-edgetpu.list
 >curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
 >sudo apt-get update
 
