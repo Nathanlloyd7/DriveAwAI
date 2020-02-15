@@ -55,11 +55,11 @@ Step 3: Check Installs by running a model
 
 # Installing Requirements
 Step 1:
--Enable i2c, SSH, Camera and VNC  in Raspberry Pi config.
+*Enable i2c, SSH, Camera and VNC  in Raspberry Pi config.
 Step 2:
--Download the project if you haven't already.
+*Download the project if you haven't already.
 Step 3:
--Unzip
+*Unzip
 Step 4:
--Navigate to the directory (/DriveAwAI-Nathanlloyd7) through terminal, here you can find the requirements doc. Then Run ->
+*Navigate to the directory (/DriveAwAI-Nathanlloyd7) through terminal, here you can find the requirements doc. Then Run ->
 >pip install --user --requirement Requirements.txt
