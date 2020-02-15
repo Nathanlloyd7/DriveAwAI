@@ -54,9 +54,9 @@ Step 3: Check Installs by running a model
 >--input images/parrot.jpg
 
 # Installing Requirements
-Step 1: →→
-Enable i2c, SSH, Camera and VNC  in Raspberry Pi config.→→
-Step 2:→→
+Step 1: <br/>
+Enable i2c, SSH, Camera and VNC  in Raspberry Pi config.<br/>
+Step 2:<br/>
 Download the project if you haven't already.→→
 Step 3:→→
 Unzip→→
