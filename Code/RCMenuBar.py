@@ -55,14 +55,11 @@ class RCMenuBar(tk.Menu):
     def passSetting(self):  #will allow customization
         global passSet #so it can be destroyed
         passSet = Toplevel()
-        passSet.title("Control Panel")
+        passSet.title("Password Panel")
         passSet.minsize(300,300)
         dlpath = os.getcwd()
         passSetsFile = open(dlpath+"/Code/Settings/passSetting.txt", "r")
         loadedPass = passSetsFile.readline()
-        print(loadedPass)
-        print(type(loadedPass))
-
         passSettingFrame = Frame(passSet, width=200, height=10, borderwidth=1)
         passSettingFrame.grid(row=1, column=0, padx=10, pady=2)
         Label(passSet, text="This is the password Page\n here you can change password settins and logon").grid(row=0, column=0, padx=10, pady=2)
@@ -71,7 +68,7 @@ class RCMenuBar(tk.Menu):
         pwNum3 = Button(passSettingFrame, text="3", command = lambda : self.addtoPW(str(3))).grid(row=0, column=2, padx=10, pady=2)
         pwNum4 = Button(passSettingFrame, text="4", command = lambda : self.addtoPW(str(4))).grid(row=0, column=3, padx=10, pady=2)
         global newPWLog
-        newPWLog = Text(passSet, width = 20, height = 2, takefocus=0)
+        newPWLog = Text(passSet, width = 20, height = 2, takefocus=0, state="disabled")
         newPWLog.grid(row=4, column=0, padx=10, pady=2)
         #newPWLog.insert(0.0,"Enter Password: ")
         Label(passSet, text="Enter Password").grid(row=3, column=0, padx=10, pady=2)
@@ -87,21 +84,23 @@ class RCMenuBar(tk.Menu):
     def savePass(self):
         dlpath = os.getcwd()
         passSetsFile = open(dlpath+"/Code/Settings/passSetting.txt", "w")
-        #newPin = str(1113)
         newPin = newPWLog.get(0.0,END)
-
-
-        passSetsFile.write(str(newPin))
-        print(newPin)
-        passSetsFile.close()
-        passSet.destroy()
+        if len(str(newPin)) == 5:
+            passSetsFile.write(str(newPin))
+            passSetsFile.close()
+            passSet.destroy()
+        else:
+            messagebox.showwarning(title="Invalid Password", message = "Must have only 4 digits")
 
     def addtoPW(self, pwNum):
+        newPWLog.configure(state="normal")
         newPWLog.insert(END, pwNum)
-        print(pwNum)
-
+        newPWLog.configure(state="disabled")
+        
     def clearPW(self):
+        newPWLog.configure(state="normal")
         newPWLog.delete(0.0,END)
+        newPWLog.configure(state="disabled")
 
 
 
