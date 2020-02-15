@@ -1,6 +1,6 @@
 #control direction of rc
 from tkinter import *
-from RCCar import *
+from Code.RCCar import *
 from PIL import Image, ImageTk
 
 class RCMovementPanel:
