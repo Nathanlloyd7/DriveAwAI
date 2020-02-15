@@ -2,10 +2,12 @@ import tkinter as tk
 from tkinter import *
 from tkinter import messagebox
 import sys
+import os
 
 class RCMenuBar(tk.Menu):
     def __init__(self, parent):
         tk.Menu.__init__(self, parent)
+        dlpath = os.getcwd()
         fileMenu = tk.Menu(self, tearoff=0)
         self.add_cascade(label="File",underline=0, menu=fileMenu)
         fileMenu.add_command(label="Control Settings",underline=0, command = self.controlSetting)
@@ -55,8 +57,8 @@ class RCMenuBar(tk.Menu):
         passSet = Toplevel()
         passSet.title("Control Panel")
         passSet.minsize(300,300)
-
-        passSetsFile = open("/Settings/passSetting.txt", "r")
+        dlpath = os.getcwd()
+        passSetsFile = open(dlpath+"/Code/Settings/passSetting.txt", "r")
         loadedPass = passSetsFile.readline()
         print(loadedPass)
         print(type(loadedPass))
@@ -83,7 +85,8 @@ class RCMenuBar(tk.Menu):
 
 
     def savePass(self):
-        passSetsFile = open("/Settings/passSetting.txt", "w")
+        dlpath = os.getcwd()
+        passSetsFile = open(dlpath+"/Code/Settings/passSetting.txt", "w")
         #newPin = str(1113)
         newPin = newPWLog.get(0.0,END)
 
@@ -117,14 +120,16 @@ class RCMenuBar(tk.Menu):
 
 # ------------------------ Motor Speed Lock Menu Item and Methods ------------------------
     def loadMotSettings(self):
-        motorSetsFile = open("/Settings/motorSetting.txt", "r") #current setup lets you save to a doc but not show in a log or print in??
+        dlpath = os.getcwd()
+        motorSetsFile = open(dlpath+"/Code/Settings/motorSetting.txt", "r") #current setup lets you save to a doc but not show in a log or print in??
         loadedVar = motorSetsFile.read(1)
         return loadedVar
         motorSetsFile.close()
 
 
     def saveMotor(self, ):
-        motorSetsFile = open("/Settings/motorSetting.txt", "w")
+        dlpath = os.getcwd()
+        motorSetsFile = open(dlpath+"/Code/Settings/motorSetting.txt", "w")
         if selected.get() == 1:
             print("You have selected : "+ str(selected.get()) + ": Manual speed is ON")
             motorSetsFile.write(str(selected.get()))
@@ -164,3 +169,4 @@ class RCMenuBar(tk.Menu):
 
     def noSpeed(self):
         print("Speed Toggle Disabled\n Modify in Motor Settings")
+
