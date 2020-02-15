@@ -2,17 +2,18 @@
 Brief intro to content
 
 ## Shopping List
-Raspberry Pi 4
-ExplorerHat
-Coral TPU
-PiCam V2
-
-Motors
-Wheels
-Dragging Wheel (Shooping Cart)
-Jumper Wires M-M
-LED's x2
-Resistor x2
+ITEM | COST | Link
+------------------
+Raspberry Pi 4 | £40 | ??
+ExplorerHat | ??|??
+Coral TPU | ??|??
+PiCam V2 | ??|??
+Motors | ??|??
+Wheels |?? |??
+Dragging Wheel (Shooping Cart) |?? |??
+Jumper Wires M-M |?? |??
+LED's x2 |??|??
+Resistor x2 | ??|??
 
 ## Car Body
 I have had a lot of help from a friend designing a chassis to fit the items I've accumilated, you can use whatever you want for your body... but the CAD models and designs will be displayed within a folder shortly.
@@ -21,7 +22,7 @@ I have had a lot of help from a friend designing a chassis to fit the items I've
 ## Installing Coral TPU
 Step 1: Install Coral TPU - https://coral.ai/docs/accelerator/get-started/
 
-<addr> echo "deb https://packages.cloud.google.com/apt coral-edgetpu-stable main" | sudo tee /etc/apt/sources.list.d/coral-edgetpu.list
+>echo "deb https://packages.cloud.google.com/apt coral-edgetpu-stable main" | sudo tee /etc/apt/sources.list.d/coral-edgetpu.list
 >curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
 >sudo apt-get update
 
