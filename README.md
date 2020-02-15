@@ -1,5 +1,5 @@
 # DriveAwAI - Final Year Project - Nathan Lloyd
-Brief intro to content
+Welcome to my Final Year Project as an undergraduate, the aim of this project is to have a semi autonomous vehicle that naturally has the ability to toggle between assisted. This will be done utilising a Pi 4, Coral TPU and explorerHAT.
 
 ## Shopping List
 
@@ -11,6 +11,7 @@ Coral TPU | ??|??
 PiCam V2 | ??|??
 Motors | ??|??
 Wheels |?? |??
+Fan Shim | ?? | ??
 Dragging Wheel (Shooping Cart) |?? |??
 Jumper Wires M-M |?? |??
 LED's x2 |??|??
