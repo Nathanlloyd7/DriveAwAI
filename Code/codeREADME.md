@@ -9,3 +9,5 @@ Improve Colour Scheme?
 Added Controller support ds4drv?
 Need to add model to GitHub
 
+https://pip.pypa.io/en/stable/user_guide/#requirements-files
+https://docs.python-guide.org/writing/structure/
