@@ -63,10 +63,10 @@ class RCMenuBar(tk.Menu):
         passSettingFrame = Frame(passSet, width=200, height=10, borderwidth=1)
         passSettingFrame.grid(row=1, column=0, padx=10, pady=2)
         Label(passSet, text="This is the password Page\n here you can change password settins and logon").grid(row=0, column=0, padx=10, pady=2)
-        pwNum1 = Button(passSettingFrame, text="1", command = lambda : self.addtoPW(str(1))).grid(row=0, column=0, padx=10, pady=2)
-        pwNum2 = Button(passSettingFrame, text="2", command = lambda : self.addtoPW(str(2))).grid(row=0, column=1, padx=10, pady=2)
-        pwNum3 = Button(passSettingFrame, text="3", command = lambda : self.addtoPW(str(3))).grid(row=0, column=2, padx=10, pady=2)
-        pwNum4 = Button(passSettingFrame, text="4", command = lambda : self.addtoPW(str(4))).grid(row=0, column=3, padx=10, pady=2)
+        pwNum1 = Button(passSettingFrame, text="1", command = lambda : self.addtoPW(1)).grid(row=0, column=0, padx=10, pady=2)
+        pwNum2 = Button(passSettingFrame, text="2", command = lambda : self.addtoPW(2)).grid(row=0, column=1, padx=10, pady=2)
+        pwNum3 = Button(passSettingFrame, text="3", command = lambda : self.addtoPW(3)).grid(row=0, column=2, padx=10, pady=2)
+        pwNum4 = Button(passSettingFrame, text="4", command = lambda : self.addtoPW(4)).grid(row=0, column=3, padx=10, pady=2)
         global newPWLog
         newPWLog = Text(passSet, width = 20, height = 2, takefocus=0, state="disabled")
         newPWLog.grid(row=4, column=0, padx=10, pady=2)
@@ -85,14 +85,18 @@ class RCMenuBar(tk.Menu):
         import bcrypt
         dlpath = os.getcwd()
         passSetsFile = open(dlpath+"/Code/Settings/passSetting.txt", "wb")
-        newPin = newPWLog.get(0.0,END)
-        if len(str(newPin)) == 5:
-            hashed = bcrypt.hashpw(newPin.encode("utf-8"), bcrypt.gensalt())
+        newPin = newPWLog.get(0.0,'end-1c')
+        if len(str(newPin)) == 4: #edit this to change pw length
+            listPin = []
+            for c in newPin: #appends each textbox element to a list, list format required for pin
+                listPin.append(int(c)) #converts to int to remove 'x' format
+            
+            hashed = bcrypt.hashpw(str(listPin).encode("utf-8"), bcrypt.gensalt()) #encode and salt
             passSetsFile.write(hashed)
             passSetsFile.close()
             passSet.destroy()
         else:
-            messagebox.showwarning(title="Invalid Password", message = "Must have only 4 digits")
+            messagebox.showwarning(title="Invalid Password", message = "Must have 4 digits!")
 
     def addtoPW(self, pwNum):
         newPWLog.configure(state="normal")
@@ -170,4 +174,5 @@ class RCMenuBar(tk.Menu):
 
     def noSpeed(self):
         print("Speed Toggle Disabled\n Modify in Motor Settings")
+
 
