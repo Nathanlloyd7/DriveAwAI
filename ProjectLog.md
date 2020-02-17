@@ -50,3 +50,7 @@ With other deadlines looming way before this one, and already being a decent way
 
 15.02.20
 Long time since the last log, bogged down with other uni work but I have been working on this as some commits show. I have a model working with the TPU but it currently doesn't effect the Pi, it can see but not act upon anything. I have also been working on the chassis and its nearly complete. Because of this I can add directional functionality... however, it may need fine tuning. I have spent some of the day just cleaning up the files, I want be able to curl in my files between different SD cards and have everything pre-installed by doing so. So a bit of housekeeping is going to occur to do this.
+
+17.02.20
+Have created requirements file.
+Have also added extra security by hashing the pin passwords.
