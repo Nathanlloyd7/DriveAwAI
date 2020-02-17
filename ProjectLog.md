@@ -53,4 +53,4 @@ Long time since the last log, bogged down with other uni work but I have been wo
 
 17.02.20
 Have created requirements file.
-Have also added extra security by hashing the pin passwords.
+Have also added extra security by hashing the pin passwords.**Hash of these commits matches 4321, however, github adds whitespace at the end of the line, so please remove this**
