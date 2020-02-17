@@ -82,15 +82,17 @@ class RCMenuBar(tk.Menu):
 
 
     def savePass(self):
+        import bcrypt
         dlpath = os.getcwd()
-        passSetsFile = open(dlpath+"/Code/Settings/passSetting.txt", "w")
+        passSetsFile = open(dlpath+"/Code/Settings/passSetting.txt", "wb")
         newPin = newPWLog.get(0.0,END)
         if len(str(newPin)) == 5:
-            passSetsFile.write(str(newPin))
+            hashed = bcrypt.hashpw(newPin.encode("utf-8"), bcrypt.gensalt())
+            passSetsFile.write(hashed)
             passSetsFile.close()
             passSet.destroy()
         else:
-            messagebox.showwarning(title="Invalid Password", message = "Must have 4 digits!")
+            messagebox.showwarning(title="Invalid Password", message = "Must have only 4 digits")
 
     def addtoPW(self, pwNum):
         newPWLog.configure(state="normal")
