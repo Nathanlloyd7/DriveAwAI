@@ -1,6 +1,12 @@
 # DriveAwAI - Final Year Project - Nathan Lloyd
 Welcome to my Final Year Project as an undergraduate, the aim of this project is to have a semi autonomous vehicle that naturally has the ability to toggle between assisted. This will be done utilising a Pi 4, Coral TPU and explorerHAT Pro.
 
+## Objectives
+* Create a Raspberry Pi RC Car
+* Provide a suitable GUI control
+* Include autonomous driving elements, utilising computer vision
+* Provide suitable security 
+
 ## Shopping List
 
 Item | COST | Link
