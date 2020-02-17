@@ -3,31 +3,17 @@ import explorerhat as hat
 import RPi.GPIO as GPIO
 import sys
 import os
-
+import bcrypt
 
 
 class RCPassword:
     def __init__(self):
         dlpath = os.getcwd()
         #loadinpin
-        loadedFile = open(dlpath+"/Code/Settings/passSetting.txt", "r")
-        loadedPW = loadedFile.read()
+        loadedFile = open(dlpath+"/Code/Settings/passSetting.txt", "rb")
+        loadedPW = loadedFile.read() #hashedPWsave
         loadedFile.close()
-        #print(loadedPW.split(','))
-        loadedPW0 = int(loadedPW[0])
-        loadedPW1 = int(loadedPW[1])
-        loadedPW2 = int(loadedPW[2])
-        loadedPW3 = int(loadedPW[3])
 
-
-        #check password is in range
-        if (loadedPW0+loadedPW1+loadedPW2+loadedPW3) < 4 or (loadedPW0+loadedPW1+loadedPW2+loadedPW3) >16:
-            print("The values exceed pin range, passwords have been tampered with")
-            sys.exit()
-        else:
-            pass
-
-        self.correct_pin = [loadedPW0,loadedPW1,loadedPW2,loadedPW3]
         self.pin = []
         self.counter = 1
 
@@ -55,7 +41,7 @@ class RCPassword:
             while len(self.pin) < 4:  ## Keeping adding until 4 digits added
                 hat.touch.pressed(self.add_to_pin)
                 time.sleep(0.05)
-            if self.pin == self.correct_pin:  ## Runs with correct PIN
+            if bcrypt.checkpw(str(self.pin).encode("utf-8"), loadedPW):  ## Runs with correct PIN
                 print('PIN correct!')
                 for i in range(5):  ## Blinks LEDs
                     hat.output.one.on()  ## Turns green LED on
@@ -101,4 +87,5 @@ class RCPassword:
 
     def getSavedPin(self):
         return self.correct_pin
+
 
