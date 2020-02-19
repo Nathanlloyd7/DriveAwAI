@@ -15,7 +15,7 @@ class RCMenuBar(tk.Menu):
         fileMenu.add_command(label="Password Settings",underline=0, command = self.passSetting)
         fileMenu.add_command(label="Fun Settings",underline=0, command = self.funSetting)
         fileMenu.add_separator()
-        fileMenu.add_command(label="Exit", underline=1, command=self.quit)
+        fileMenu.add_command(label="Exit", underline=1, command= quit)
         helpMenu = tk.Menu(self, tearoff=0)
         self.add_cascade(label="Help", menu = helpMenu, underline=0)
         helpMenu.add_command(label="About", underline=0, command = self.about)
@@ -24,15 +24,6 @@ class RCMenuBar(tk.Menu):
         self.bind_all("<Control-c>", self.controlSetting)
         self.bind_all("<Control-m>", self.motorSetting)
 
-# ------------------------ Quit Menu Item ------------------------
-
-    def quit(self):
-        print("Exit")
-        try:
-            #self.parent.destroy() #destroys the menu not all windows, need to sort this
-            sys.exit(0)
-        except:
-            print(sys.exc_info()[0])
 
 
 # ------------------------ About Menu Item ------------------------
@@ -174,5 +165,6 @@ class RCMenuBar(tk.Menu):
 
     def noSpeed(self):
         print("Speed Toggle Disabled\n Modify in Motor Settings")
+
 
 
