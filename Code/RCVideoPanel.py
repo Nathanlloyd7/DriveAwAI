@@ -20,7 +20,6 @@ class RCVideoPanel:
         
     def show_frame(self):
         _, frame = self.capture.read()
-        frame = cv2.flip(frame, 1)
         cv2image = cv2.cvtColor(frame, cv2.COLOR_BGR2RGBA)
         img = Image.fromarray(cv2image)
         imgtk = ImageTk.PhotoImage(image=img)
