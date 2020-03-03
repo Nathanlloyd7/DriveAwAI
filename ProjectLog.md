@@ -54,3 +54,9 @@ Long time since the last log, bogged down with other uni work but I have been wo
 17.02.20
 Have created requirements file.
 Have also added extra security by hashing the pin passwords.**Hash of these commits matches 4321, however, github adds whitespace at the end of the line, so please remove this**
+
+03.03.20
+Removed flip from the video stream. 
+Spent the last week finishing up the core driving elements, motors are now installed using 3D printed elements, car can now be driven using GUI. Need to shift the minimum speed selectable though in slider. 35 is too slow. 50 is new minimum.
+
+Also bought toy model traffic signs, taken 120 photos containing around 250 object instances. Used LabelImg to box the signs and toy person. Got a few left to do as I need to retake a few photos due to poor image quality. After this I can xml -> CSV -> TFRecord ... and then start training (transfer learning on MobileNet v2 SSD COCO), COCO contains a few objects that I could use anyway, such as cars, people, trucks et. MobileNet v2 SSD is well documented and middleground of accuracy and speed. May try and train my own from scratch not using COCO but will see.
