@@ -10,11 +10,11 @@ from Code.RCPassword import RCPassword
 
 class RCTKWindow(tk.Tk):
     def __init__(self):
-        root = tk.Tk.__init__(self) #Makes the window
+        tk.Tk.__init__(self) #Makes the window
         global dlpath
         dlpath = os.getcwd()
         self.passW = RCPassword()
-        self.menubar = RCMenuBar(root)
+        self.menubar = RCMenuBar(self)
         self.config(menu=self.menubar)
         self.minsize(955,545)
         self.maxsize(955,545)
@@ -33,5 +33,4 @@ class RCTKWindow(tk.Tk):
 
     def start(self):
         self.mainloop() #start monitoring and updating the GUI
-
 
