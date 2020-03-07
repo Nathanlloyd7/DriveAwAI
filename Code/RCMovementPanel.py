@@ -10,6 +10,14 @@ class RCMovementPanel:
         self.root = root
         self.frame = frame
         dlpath = os.getcwd()
+        motorSetsFile = open(dlpath+"/Code/Settings/motorSetting.txt", "r") #current setup lets you save to a doc but not show in a log or print in??
+        global loadedVar
+        loadedVar = motorSetsFile.read(1)
+        
+            
+            
+        
+        
         
 #images import and process into smaller size
         try:
@@ -88,7 +96,7 @@ class RCMovementPanel:
         self.aiTogBtn = Button(self.frame, text="Ai Toggle", command=lambda:print("a/i toggle"))
         self.aiTogBtn.grid(row=5, column=0, padx=10, pady=2)
 #speed
-
+        global scale
         Label(self.frame, text=" ").grid(row=6, column=0, padx=10, pady=2)
         self.speedFrame = Frame(self.frame, width=200, height=10, borderwidth=1)
         self.speedFrame.grid(row=7, column=0, padx=10, pady=2)
@@ -98,8 +106,24 @@ class RCMovementPanel:
         self.scale.set(75)                                                                           #sets default speed
         self.setSpeed = Button(self.speedFrame, text="Set Speed", command = self.returnSpeed)
         self.setSpeed.grid(row=2, column =0, padx=10, pady=2)
+            
+
 
     def returnSpeed(self):
-            self.rc.set__spd(self.scale.get())
-            print (self.scale.get())     #mock function for now
+            if int(loadedVar) == 1:
+                self.rc.set__spd(self.scale.get())
+                print (self.scale.get())     #mock function for now
+            elif int(loadedVar) == 0:
+                messagebox.showwarning(title="Modification = Off", message = "This safety feature has been toggled.\nPlease go to Motor settings to remedy this!")
+                print("control off")
+            else:
+                print('An error occurred trying to analyse file contents')
+        
+
+    
+    def speedOff(self):
+           setSpeed.configure(state="disabled")
+           scale.config(state=DISABLED)
+           
+
 

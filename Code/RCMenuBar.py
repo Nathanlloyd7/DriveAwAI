@@ -128,11 +128,13 @@ class RCMenuBar(tk.Menu):
         motorSetsFile = open(dlpath+"/Code/Settings/motorSetting.txt", "w")
         if selected.get() == 1:
             print("You have selected : "+ str(selected.get()) + ": Manual speed is ON")
+            messagebox.showinfo(title="Manual Speed On", message = "Restart Application to take Effect")
             motorSetsFile.write(str(selected.get()))
             motorSetsFile.close()
             motorSet.destroy()
         elif selected.get() == 0:
             print("You have selected : "+ str(selected.get()) + ": Manual speed is OFF")
+            messagebox.showinfo(title="Manual Speed Off", message = "Restart Application to take Effect")
             motorSetsFile.write(str(selected.get()))
             motorSetsFile.close()
             motorSet.destroy()
