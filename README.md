@@ -26,6 +26,7 @@ LED's x2 | £2.50 | https://thepihut.com/products/adafruit-diffused-5mm-led-pack
 Resistor x2 | £6 | https://thepihut.com/products/ultimate-resistor-kit
 Blue Tape | £1 | https://www.amazon.co.uk/gp/product/B0001IXA76/ref=ppx_yo_dt_b_asin_title_o02_s00?ie=UTF8&psc=1
 Pi Cam Ribbon Ext | £4 | https://www.amazon.co.uk/gp/product/B01MU2HAOM/ref=ppx_yo_dt_b_asin_title_o03_s00?ie=UTF8&psc=1
+Toy Traffic Signs | £12 | https://www.amazon.co.uk/gp/product/B07PD2M9C4/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&psc=1
 Battery Pack | TBD | TBD
 Total| £200 -£250 | I've not gone out to look for the best deal, so please do that yourself.
 
