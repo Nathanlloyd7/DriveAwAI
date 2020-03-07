@@ -1,0 +1,38 @@
+<annotation>
+	<folder>Training</folder>
+	<filename>20200302_122455516_iOS.jpg</filename>
+	<path>C:\Users\Nath\OneDrive\Desktop\University\Year3 Desktop\Data\Training\20200302_122455516_iOS.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>4032</width>
+		<height>3024</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Traffic_Sign_No_Entry</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>1292</xmin>
+			<ymin>1156</ymin>
+			<xmax>1698</xmax>
+			<ymax>1518</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>person</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>2101</xmin>
+			<ymin>2003</ymin>
+			<xmax>2673</xmax>
+			<ymax>2796</ymax>
+		</bndbox>
+	</object>
+</annotation>

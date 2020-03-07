@@ -1,0 +1,26 @@
+<annotation>
+	<folder>Training</folder>
+	<filename>20200302_115815119_iOS.jpg</filename>
+	<path>C:\Users\Nath\OneDrive\Desktop\University\Year3 Desktop\Data\Training\20200302_115815119_iOS.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>3024</width>
+		<height>4032</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>person</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>1138</xmin>
+			<ymin>1818</ymin>
+			<xmax>1820</xmax>
+			<ymax>2709</ymax>
+		</bndbox>
+	</object>
+</annotation>
