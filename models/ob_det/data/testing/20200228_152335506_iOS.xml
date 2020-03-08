@@ -1,0 +1,26 @@
+<annotation>
+	<folder>shrunk</folder>
+	<filename>20200228_152335506_iOS.jpg</filename>
+	<path>C:\Users\Nath\OneDrive\Desktop\DriveAwAI-master\models\object_detection\data\shrunk\20200228_152335506_iOS.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>800</width>
+		<height>600</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Traffic_Sign_30</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>389</xmin>
+			<ymin>77</ymin>
+			<xmax>551</xmax>
+			<ymax>198</ymax>
+		</bndbox>
+	</object>
+</annotation>
