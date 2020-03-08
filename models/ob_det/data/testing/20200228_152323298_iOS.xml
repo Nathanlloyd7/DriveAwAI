@@ -1,0 +1,26 @@
+<annotation>
+	<folder>shrunk</folder>
+	<filename>20200228_152323298_iOS.jpg</filename>
+	<path>C:\Users\Nath\OneDrive\Desktop\DriveAwAI-master\models\object_detection\data\shrunk\20200228_152323298_iOS.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>800</width>
+		<height>600</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>person</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>311</xmin>
+			<ymin>97</ymin>
+			<xmax>502</xmax>
+			<ymax>447</ymax>
+		</bndbox>
+	</object>
+</annotation>
