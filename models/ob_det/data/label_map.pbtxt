@@ -1,0 +1,24 @@
+item {
+    id: 1
+    name: 'Traffic_Sign_30'
+}
+
+item {
+    id: 2
+    name: 'Traffic_Sign_50'
+}
+
+item {
+    id: 3
+    name: 'Traffic_Sign_No_Entry'
+}
+
+item {
+    id: 4
+    name: 'Traffic_Sign_Stop'
+}
+
+item {
+    id: 5
+    name: 'person'
+}
