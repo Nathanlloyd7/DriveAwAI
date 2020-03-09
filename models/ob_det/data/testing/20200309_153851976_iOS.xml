@@ -1,0 +1,38 @@
+<annotation>
+	<folder>Testing</folder>
+	<filename>20200309_153851976_iOS.jpg</filename>
+	<path>C:\Users\Nath\OneDrive\Desktop\University\Year3 Desktop\Data\Testing\20200309_153851976_iOS.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>800</width>
+		<height>600</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Traffic_Sign_Stop</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>117</xmin>
+			<ymin>192</ymin>
+			<xmax>288</xmax>
+			<ymax>358</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Traffic_Sign_No_Entry</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>503</xmin>
+			<ymin>165</ymin>
+			<xmax>645</xmax>
+			<ymax>308</ymax>
+		</bndbox>
+	</object>
+</annotation>
