@@ -1,0 +1,26 @@
+<annotation>
+	<folder>3rdImages</folder>
+	<filename>20200327_150300142_iOS.jpg</filename>
+	<path>C:\Users\Nath\Downloads\3rdImages\3rdImages\20200327_150300142_iOS.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>800</width>
+		<height>600</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Traffic_Sign_No_Entry</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>460</xmin>
+			<ymin>135</ymin>
+			<xmax>499</xmax>
+			<ymax>177</ymax>
+		</bndbox>
+	</object>
+</annotation>
