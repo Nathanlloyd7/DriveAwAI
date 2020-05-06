@@ -1,0 +1,5 @@
+1 Traffic_Sign_30
+2 Traffic_Sign_50
+3 Traffic_Sign_No_Entry
+4 Traffic_Sign_Stop
+5 person
