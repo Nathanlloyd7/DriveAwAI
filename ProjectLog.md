@@ -60,3 +60,15 @@ Removed flip from the video stream.
 Spent the last week finishing up the core driving elements, motors are now installed using 3D printed elements, car can now be driven using GUI. Need to shift the minimum speed selectable though in slider. 35 is too slow. 50 is new minimum.
 
 Also bought toy model traffic signs, taken 120 photos containing around 250 object instances. Used LabelImg to box the signs and toy person. Got a few left to do as I need to retake a few photos due to poor image quality. After this I can xml -> CSV -> TFRecord ... and then start training (transfer learning on MobileNet v2 SSD COCO), COCO contains a few objects that I could use anyway, such as cars, people, trucks et. MobileNet v2 SSD is well documented and middleground of accuracy and speed. May try and train my own from scratch not using COCO but will see.
+
+11.05.20
+It has been a very long time since I have used the log. I will give a very short but sweet update on what I've been working on.
+- Chassis is virtually done
+- There are loads more photos and objects within each photo
+- Three models were created, expanding dataset each time
+- 3rd Model, although could be improved further is suitable
+- Coral TPU is a pain to work with 'libedgetpu.so.1' is the bain of my existence
+- I can get the model to work outside of the application and control motors seperately
+- GUI barebones is done.
+
+Project is nearly at the end for what I set out to do. I have a week left to try and wrestle the edgetpu into submission, otherwise I have a tech demo for the model controlling motors and a seperate one for the GUI/Security/Car. Bit of a pain to have everything done but the last segments not wanting to co-operate.
