@@ -3,6 +3,8 @@ from tkinter import *
 from Code.RCCar import *
 from PIL import Image, ImageTk
 import os
+import Code.RCAutomated as rcauto
+
 
 class RCMovementPanel:
     def __init__(self, root, frame):
@@ -93,7 +95,8 @@ class RCMovementPanel:
         self.right_downBtn.grid(row=0, column=3, padx=10, pady=2)
         Label(self.frame, text=" ").grid(row=4, column=0, padx=10, pady=2)
 #Auto/Man Toggle
-        self.aiTogBtn = Button(self.frame, text="Ai Toggle", command=lambda:print("a/i toggle"))
+        
+        self.aiTogBtn = Button(self.frame, text="Ai Toggle", command=rcauto.goAI)
         self.aiTogBtn.grid(row=5, column=0, padx=10, pady=2)
 #speed
         global scale
@@ -107,23 +110,21 @@ class RCMovementPanel:
         self.setSpeed = Button(self.speedFrame, text="Set Speed", command = self.returnSpeed)
         self.setSpeed.grid(row=2, column =0, padx=10, pady=2)
             
-
-
     def returnSpeed(self):
-            if int(loadedVar) == 1:
-                self.rc.set__spd(self.scale.get())
-                print (self.scale.get())     #mock function for now
-            elif int(loadedVar) == 0:
-                messagebox.showwarning(title="Modification = Off", message = "This safety feature has been toggled.\nPlease go to Motor settings to remedy this!")
-                print("control off")
-            else:
-                print('An error occurred trying to analyse file contents')
-        
-
-    
+        if int(loadedVar) == 1:
+            self.rc.set__spd(self.scale.get())
+            print (self.scale.get())     #mock function for now
+        elif int(loadedVar) == 0:
+            messagebox.showwarning(title="Modification = Off", message = "This safety feature has been toggled.\nPlease go to Motor settings to remedy this!")
+            print("control off")
+        else:
+            print('An error occurred trying to analyse file contents')
+     
+       
     def speedOff(self):
            setSpeed.configure(state="disabled")
            scale.config(state=DISABLED)
            
+
 
 
