@@ -15,7 +15,7 @@ class RCVideoPanel:
 #Capture video frames
         self.lmain = tk.Label(self.imageFrame) #attach image to label
         self.lmain.grid(row=0, column=0)
-        self.capture = cv2.VideoCapture(0)
+        self.capture = cv2.VideoCapture(1)
         self.show_frame()  
         
     def show_frame(self):
