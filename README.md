@@ -17,6 +17,7 @@ ExplorerHat Pro | £20 | https://thepihut.com/products/explorer-hat
 Coral TPU | £75| https://www.mouser.co.uk/ProductDetail/Coral/G950-01456-01?qs=u16ybLDytRbcxxqFKdbhgQ%3D%3D&vip=1&gclid=Cj0KCQiAyp7yBRCwARIsABfQsnTXXBOMc39uSGN2DqE6U5CDuxEE6uXcuEYrENukWt5UyDaJZwTOfbQaAoTaEALw_wcB
 PiCam V2 | £25 | https://thepihut.com/products/raspberry-pi-camera-module
 PiCam Mount | £3 | https://shop.pimoroni.com/products/raspberry-pi-camera-mount
+Extra Webcam | £? | https://www.amazon.co.uk/TeckNet%C2%AE-1080P-Webcam-Built-Microphone/dp/B003VOEENG
 Motors & Wheels | £8 | 2 PCS DC Gear Motor + Tire Wheel for Arduino DC 3V-6V
 Fan Shim | £10 | https://thepihut.com/products/fan-shim-for-raspberry-pi
 Ninja Case | £8.50 | https://thepihut.com/products/pibow-4-coupe-case-for-raspberry-pi-4b?variant=20452597661758  
@@ -73,3 +74,7 @@ Step 3:<br/>
 Step 4:<br/>
 >Navigate to the directory (/DriveAwAI-Nathanlloyd7) through terminal, here you can find the requirements doc. Then Run <br/>
 >pip install --user --requirement Requirements.txt<br/>
+
+Step 5: <br/>
+>Navigate to the password settings file; GitHub adds whitespace to the end of the hashed password. *Remove* this whitespace or else you can't log in!
+>I've not added code to fix this as it's an issue I didn't think worth the time during development. Will likely do some string parse method to remove this in the future though.
