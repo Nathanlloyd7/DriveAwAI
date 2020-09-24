@@ -28,7 +28,7 @@
 * Future Improvements
 
 [![Video 3](https://imgur.com/hbGfHk4)](https://youtu.be/PnvW7pgBxbs "Video 3 - Click to Watch!")
-
+[![Everything Is AWESOME](http://i.imgur.com/Ot5DWAW.png)](https://youtu.be/StTqXEQ2l-Y?t=35s "Everything Is AWESOME")
 ## Video 4
 * Device Walkthrough
 
