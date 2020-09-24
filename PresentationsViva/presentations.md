@@ -6,7 +6,7 @@
 * The chassis
 * The GUI
 
-[![Video 1](https://imgur.com/fDWriVW)](https://youtu.be/bGszfEqLIKk "Video 1 - Click to Watch!")
+[![Video 1](https://i.imgur.com/fDWriVW.jpg)](https://youtu.be/bGszfEqLIKk "Video 1 - Click to Watch!")
 
 ## Video 2
 * Project Management, Issues & Flexibility 
