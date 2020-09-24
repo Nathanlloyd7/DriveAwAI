@@ -1,6 +1,8 @@
 # Why?
 *I have decided to upload my viva presentations for safekeeping as access to the onedrive has been removed upon graduating.*
 
+**Click Images to go to video**
+
 ## Video 1
 * The problem
 * The chassis
@@ -13,7 +15,7 @@
 * PIN Sytem Security
 * Hashing PIN Password
 
-[![Video 2](https://imgur.com/oxVPiIC)](https://youtu.be/l-lXbyoH-wU "Video 2 - Click to Watch!")
+[![Video 2](https://i.imgur.com/oxVPiIC.png)](https://youtu.be/l-lXbyoH-wU "Video 2 - Click to Watch!")
 
 ## Video 3
 * Coral TPU
@@ -27,7 +29,7 @@
 * Implementation
 * Future Improvements
 
-[![Video 3](https://imgur.com/hbGfHk4)](https://youtu.be/PnvW7pgBxbs "Video 3 - Click to Watch!")
+[![Video 3](https://i.imgur.com/hbGfHk4.png)](https://youtu.be/PnvW7pgBxbs "Video 3 - Click to Watch!")
 
 ## Video 4
 * Device Walkthrough
@@ -39,4 +41,4 @@
 * Project Management Stategies
 * Problems faced
 
-[![Video 5](https://imgur.com/SllbTbt)](https://youtu.be/kdOTbvWSUvU "Video 5 - Click to Watch!")
+[![Video 5](https://i.imgur.com/SllbTbt.png)](https://youtu.be/kdOTbvWSUvU "Video 5 - Click to Watch!")
