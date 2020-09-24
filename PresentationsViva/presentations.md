@@ -28,11 +28,11 @@
 * Future Improvements
 
 [![Video 3](https://imgur.com/hbGfHk4)](https://youtu.be/PnvW7pgBxbs "Video 3 - Click to Watch!")
-[![Everything Is AWESOME](http://i.imgur.com/Ot5DWAW.png)](https://youtu.be/StTqXEQ2l-Y?t=35s "Everything Is AWESOME")
+
 ## Video 4
 * Device Walkthrough
 
-[![Video 4](https://imgur.com/IHbZBVt)](https://youtu.be/6IMir6JdNHE "Video 4 - Click to Watch!")
+[![Video 4](https://i.imgur.com/IHbZBVt.png)](https://youtu.be/6IMir6JdNHE "Video 4 - Click to Watch!")
 
 ## Video 5
 * Github
