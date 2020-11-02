@@ -11,7 +11,7 @@ class RCPassword:
         dlpath = os.getcwd()
         #loadinpin
         loadedFile = open(dlpath+"/Code/Settings/passSetting.txt", "rb")
-        loadedPW = loadedFile.read() #hashedPWsave
+        loadedPW = loadedFile.read().rstrip() #one function I should have applied 10000000 hours ago #hashedPWsave
         loadedFile.close()
 
         self.pin = []
