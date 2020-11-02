@@ -29,6 +29,7 @@ Blue Tape | £1 | https://www.amazon.co.uk/gp/product/B0001IXA76/ref=ppx_yo_dt_b
 Pi Cam Ribbon Ext | £4 | https://www.amazon.co.uk/gp/product/B01MU2HAOM/ref=ppx_yo_dt_b_asin_title_o03_s00?ie=UTF8&psc=1
 Toy Traffic Signs | £12 | https://www.amazon.co.uk/gp/product/B07PD2M9C4/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&psc=1
 Battery Pack | TBD | TBD
+Webcam  up2u | up2u
 Total| £200 -£250 | I've not gone out to look for the best deal, so please do that yourself.
 
 Some of the above aren't exactly what I bought and in some cases I had parts laying around from previous projects. This is just a guide to what you may need if you fully recreate. 
@@ -36,6 +37,8 @@ Some of the above aren't exactly what I bought and in some cases I had parts lay
 ## Car Body
 I have had a lot of help from a friend designing a chassis to fit the items I've accumilated, you can use whatever you want for your body... but the CAD models and designs will be displayed within a folder shortly.
 
+## Extra Camera
+As noted in my 2nd report, an Issue was running the Object detection model as well as onboard camera display using the same input. A simple workaround was using two cameras and mounting the second on top.
 
 ## Installing Coral TPU
 Step 1: Install Coral TPU - https://coral.ai/docs/accelerator/get-started/
@@ -76,5 +79,4 @@ Step 4:<br/>
 >pip install --user --requirement Requirements.txt<br/>
 
 Step 5: <br/>
->Navigate to the password settings file; GitHub adds whitespace to the end of the hashed password. *Remove* this whitespace or else you can't log in!
->I've not added code to fix this as it's an issue I didn't think worth the time during development. Will likely do some string parse method to remove this in the future though.
+>Run main: default password on SenseHat PIN password = 4321. Have fun with your new car 
