@@ -72,3 +72,8 @@ It has been a very long time since I have used the log. I will give a very short
 - GUI barebones is done.
 
 Project is nearly at the end for what I set out to do. I have a week left to try and wrestle the edgetpu into submission, otherwise I have a tech demo for the model controlling motors and a seperate one for the GUI/Security/Car. Bit of a pain to have everything done but the last segments not wanting to co-operate.
+
+02.11.20
+Bit late on the total project update, I graduated CompSci with a first and got 98% in my dissertation project overall. Managed to wrangle the last bit of the project together and everything worked as expected in the end; see my presentations and reports that were uploaded previously. I am just revisting this project now as I wanted to have a bit of closure on the last whitespace "feature" of the hashed password (all it took was an rstrip). Overall this has been a very fun project and has introduced me to loads of cool AI/Deep Learning content. I'm continuing my studies in a masters, hopefully upskilling from implementing others NN's in transfer learning to making my own from scatch :D.
+
+
