@@ -4,7 +4,7 @@ ExplorerHAT==0.4.2
 imutils==0.5.3
 matplotlib==2.2.5
 Keras==2.3.1
-Pillow==6.2.2
+Pillow==9.0.0
 picamera==1.13
 fanshim==0.0.4  
 bcrypt==3.1.7
