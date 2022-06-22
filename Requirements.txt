@@ -1,5 +1,5 @@
 pip==20.0.2
-numpy==1.16.2 
+numpy==1.22.0 
 ExplorerHAT==0.4.2
 imutils==0.5.3
 matplotlib==2.2.5
